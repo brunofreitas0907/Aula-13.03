@@ -23,14 +23,14 @@ class Produto {
     }
 }
 
-var valores = new Produto(`pastel` , 15.35 , 50);
-var valorComDesconto = precoDesconto();
+var valores = new Produto(`pastel` , 65.35 , 50);
+var valorComDesconto = valores.precoDesconto();
 
 if(valorComDesconto < 0)
 {
-    console.log(`O desconto de ${valores.desconto}, foi maior que o preço do produto de ${valores.preco}`);
-    console.log(`\n\n Portanto, você terá um prejuízo de ${precoDesconto()}`);
+    console.log(`O desconto de R$ ${valores.desconto}, foi maior que o preço do produto de R$ ${valores.preco}`);
+    console.log(`\n\n Portanto, você terá um prejuízo de R$${valores.precoDesconto()}`);
 } else
 {
-    console.log(`O valor total do produto com desconto será de ${precoDesconto()}`);
+    console.log(`O valor total do produto com desconto será de R$ ${valores.precoDesconto().toFixed(2)}`);
 }
